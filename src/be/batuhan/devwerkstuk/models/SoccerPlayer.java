@@ -9,7 +9,7 @@ public class SoccerPlayer {
         this.number = number;
     }
 
-    public static SoccerPlayer getPlayer(String name, Integer number) {
+    public static SoccerPlayer getSoccerPlayer(String name, Integer number) {
         return new SoccerPlayer(name, number);
     }
 

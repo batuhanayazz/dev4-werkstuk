@@ -1,7 +1,7 @@
 package be.batuhan.devwerkstuk.models;
 
 import be.batuhan.devwerkstuk.iterators.SoccerPlayerIterator;
-import be.batuhan.devwerkstuk.seeds.PlayerSeeds;
+import be.batuhan.devwerkstuk.seeds.TeamsSeed;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,7 +14,7 @@ public class SoccerTeam implements SoccerPlayerIterator {
     public SoccerTeam(String name) {
         this.name = name;
         this.soccerPlayerList = new ArrayList<>();
-        loadPlayers();
+        _loadPlayers();
     }
 
     public String getName() {
@@ -33,11 +33,10 @@ public class SoccerTeam implements SoccerPlayerIterator {
         this.soccerPlayerList = soccerPlayerList;
     }
 
-    private void loadPlayers() {
-        int i = 0;
-        for (String name : PlayerSeeds.names) {
-            soccerPlayerList.add(SoccerPlayer.getPlayer(name, PlayerSeeds.numbers[i]));
-            i++;
+    private void _loadPlayers() {
+        String[] names = TeamsSeed.teamsSeed.get(name);
+        for (int i = 0; i < names.length; i++) {
+            soccerPlayerList.add(SoccerPlayer.getSoccerPlayer(names[i], i));
         }
     }
 
