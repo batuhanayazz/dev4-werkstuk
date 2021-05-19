@@ -35,8 +35,8 @@ public class SoccerTeam implements SoccerPlayerIterator {
 
     private void _loadPlayers() {
         String[] names = TeamsSeed.teamsSeed.get(name);
-        for (int i = 0; i < names.length; i++) {
-            soccerPlayerList.add(SoccerPlayer.getSoccerPlayer(names[i], i));
+        for (int i = 1; i <= names.length; i++) {
+            soccerPlayerList.add(SoccerPlayer.getSoccerPlayer(names[i-1], i));
         }
     }
 
