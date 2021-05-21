@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SoccerTeam implements SoccerPlayerIterator {
     private String name;
-    private List<SoccerPlayer> soccerPlayerList;
+    public List<SoccerPlayer> soccerPlayerList;
 
     public SoccerTeam(String name) {
         this.name = name;

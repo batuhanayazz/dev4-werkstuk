@@ -6,12 +6,13 @@ import be.batuhan.devwerkstuk.seeds.TeamsSeed;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class SoccerCompetition {
 
     private static SoccerCompetition soccerCompetition;
-    private List<SoccerTeam> soccerTeams;
+    public List<SoccerTeam> soccerTeams;
 
     public static SoccerCompetition getInstance() //factory method
     {
@@ -29,14 +30,23 @@ public class SoccerCompetition {
         }
     }
 
-    public void playGames() {
-        for (SoccerTeam team : soccerTeams) {
-            System.out.println(team.getName());
-            team.getSoccerPlayerList().forEach(
-                    p -> System.out.println(p.getName())
-            );
+    public void simulateGames() {
+        Random random = new Random();
+        int countGames = soccerTeams.size() / 2;
+        int i = 0;
+        do {
+            int t1 = random.nextInt(5);
+            int t2 = random.nextInt(5);
 
-            System.out.println("Number 10 =>" + team.find(10));
-        }
+            SoccerTeam tn1 = soccerTeams.get(i);
+            SoccerTeam tn2 = soccerTeams.get(i + 1);
+
+            System.out.printf("%s %s - %s %s \n\n", tn1.getName(), t1, tn2.getName(), t2);
+
+            i += 2;
+            countGames--;
+        } while (countGames != 0);
+
+        System.out.printf("%s didn't play \n\n", soccerTeams.get(soccerTeams.size() - 1).getName());
     }
 }
