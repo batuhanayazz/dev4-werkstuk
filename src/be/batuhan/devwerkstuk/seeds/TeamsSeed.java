@@ -7,12 +7,12 @@ public class TeamsSeed {
 
     static {
         teamsSeed = Map.of(
-                "Galatasaray", new String[]{"1", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "1"},
-                "Fenerbahce", new String[]{"2", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "2"},
-                "Antwerpen", new String[]{"3", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "3"},
-                "Konyaspor", new String[]{"3", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "3"},
-                "Besiktas", new String[]{"3", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "3"},
-                "Brugge", new String[]{"3", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "3"},
-                "Anderlecht", new String[]{"4", "Nurdogdu", "Furkan", "Ahmet", "Tomas", "Rob", "Miranda", "Jonas", "Muslera", "Fatih", "4"});
+                "Galatasaray", new String[]{"Harun", "Volkan", "Caner", "Pelkas", "Irfancan", "Robben", "James", "Hazard", "Messi", "Mesut", "Cisse"},
+                "Fenerbahce", new String[]{"Eray", "Rosier", "Vida", "Ghezzal", "Oguzhan", "Yusuf", "Aboubakar", "Nkodou", "Nani", "Alex", "Ronaldo"},
+                "Antwerpen", new String[]{"Ugurcan", "Marcos", "Huseyin", "Doku", "Lukaku", "Ribery", "Sturidge", "Arda", "Emre", "Lemos", "Anelka"},
+                "Konyaspor", new String[]{"Courtois", "Depay", "De Vrij", "Destro", "Souza", "Suso", "Hakan", "Cengiz", "Merih", "Axelle", "Jeremy"},
+                "Besiktas", new String[]{"Casillas", "Roberto", "Carlos", "Pigue", "Marcelo", "Geremy", "Sandro", "Khazri", "Belhanda", "Melo", "Mbabbe"},
+                "Brugge", new String[]{"Dida", "Pirlo", "Ronaldinho", "Pele", "Khabib", "Kalu", "Uche", "Gomez", "Hagi", "Rodri", "Muller"},
+                "Anderlecht", new String[]{"Tolga", "Basturk", "Ramiz", "Axelle", "Gotze", "Lewandowski", "Bale", "Kane", "Harry", "Ahmet", "Halil"});
     }
 }
