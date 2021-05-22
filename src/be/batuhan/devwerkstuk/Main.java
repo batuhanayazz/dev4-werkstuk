@@ -49,17 +49,26 @@ public class Main {
     private static void doMenAction(String menuItem) throws IOException {
         switch (menuItem) {
             case "1":
+                System.out.println("********** ALL TEAMS **********");
                 competition.soccerTeams.forEach(t -> System.out.println(t.getName()));
+                System.out.println("*******************************");
                 break;
             case "2":
+                System.out.println("********** ALL PLAYERS **********");
                 competition.soccerTeams.forEach(t -> t.getSoccerPlayerList().forEach(ps -> System.out.println(ps.getName())));
+                System.out.println("*******************************");
                 break;
             case "3":
+                System.out.println("********** ALL TEAMS **********");
+                competition.soccerTeams.forEach(t -> System.out.println(t.getName()));
+                System.out.println("*******************************");
                 System.out.println("Enter a team name");
                 String teamName = reader.readLine();
                 Optional<SoccerTeam> team = competition.soccerTeams.stream().filter(t -> t.getName().equals(teamName)).findFirst();
                 if (team.isPresent()) {
+                    System.out.println("********** PLAYERS **********");
                     team.get().forEach(p -> System.out.println(p.getName()));
+                    System.out.println("*******************************");
                 } else {
                     System.out.println("Team not found");
                 }
