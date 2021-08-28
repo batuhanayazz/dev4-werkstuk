@@ -12,6 +12,7 @@ public class Main {
 
     static SoccerCompetition competition;
     static BufferedReader reader;
+    static GameSimulator gameSimulator = new GameSimulator();
 
     public static void main(String[] args) {
         reader = new BufferedReader(new InputStreamReader(System.in));
@@ -50,24 +51,24 @@ public class Main {
         switch (menuItem) {
             case "1":
                 System.out.println("********** ALL TEAMS **********");
-                competition.soccerTeams.forEach(t -> System.out.println(t.getName()));
+                competition.soccerTeams.forEach(t -> System.out.println(t.name));
                 System.out.println("*******************************");
                 break;
             case "2":
                 System.out.println("********** ALL PLAYERS **********");
-                competition.soccerTeams.forEach(t -> t.getSoccerPlayerList().forEach(ps -> System.out.println(ps.getName())));
+                competition.soccerTeams.forEach(t -> t.soccerPlayerList.forEach(ps -> System.out.println(ps.print())));
                 System.out.println("*******************************");
                 break;
             case "3":
                 System.out.println("********** ALL TEAMS **********");
-                competition.soccerTeams.forEach(t -> System.out.println(t.getName()));
+                competition.soccerTeams.forEach(t -> System.out.println(t.name));
                 System.out.println("*******************************");
                 System.out.println("Enter a team name");
                 String teamName = reader.readLine();
-                Optional<SoccerTeam> team = competition.soccerTeams.stream().filter(t -> t.getName().equals(teamName)).findFirst();
+                Optional<SoccerTeam> team = competition.soccerTeams.stream().filter(t -> t.name.equals(teamName)).findFirst();
                 if (team.isPresent()) {
                     System.out.println("********** PLAYERS **********");
-                    team.get().forEach(p -> System.out.println(p.getName()));
+                    team.get().forEach(p -> System.out.println(p.name));
                     System.out.println("*******************************");
                 } else {
                     System.out.println("Team not found");
@@ -79,12 +80,12 @@ public class Main {
                 for (SoccerTeam t : competition.soccerTeams) {
                     SoccerPlayer p = t.find(Integer.parseInt(number));
                     if (p != null) {
-                        System.out.format("%s => %s %d \n\n", t.getName(), p.getName(), p.getNumber());
+                        System.out.format("%s => %s %d \n\n", t.name, p.name, p.number);
                     }
                 }
                 break;
             case "5":
-                competition.simulateGames();
+                gameSimulator.simulateCompetition(competition.soccerTeams);
                 break;
             case "0":
                 System.exit(0);
