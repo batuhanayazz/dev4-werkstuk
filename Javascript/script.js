@@ -53,3 +53,45 @@ elSoccerPlayers.sortTeam = function(team){
 }
 // Get value from prompt(team name) sort soccer player name by team
 elSoccerPlayers.sortTeam(`${input}`);
+
+
+// ENGLISH
+
+/* WHY ITERATOR ? */
+
+/*
+
+-- Purpose --
+Iterator is a behavioral design pattern that lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree...). 
+
+-- Problem --
+Collections are one of the most used data types in programming. Nonetheless, a collection is just a container for a group of objects.
+Most collections store their elements in simple lists. However, some of them are based on stacks, trees, graphs and other complex data structures.
+
+-- Solution --
+The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called an iterator.
+
+All iterators must implement the same interface. This makes the client code compatible with compatible with any collection type or any traversal algorithm as long as there’s a proper iterator.
+If you need a special way to traverse a collection, you just create a new iterator class, without having to change the collection or the client.
+*/
+
+
+// NEDERLANDS
+
+/* WAAROM ITERATOR ? */
+
+/*
+
+-- Doel --
+Iterator is een behavioral design pattern waarmee je elementen van een collectie kunt doorkruisen zonder de onderliggende representatie (list, stack, tree...) te leggen.
+
+-- Problem --
+Verzamelingen zijn een van de meest gebruikte gegevenstypen bij het programmeren. Niettemin is een verzameling slechts een container voor een groep objecten.
+De meeste collecties slaan hun elementen op in eenvoudige lijsten. Sommige zijn echter gebaseerd op stacks, trees, graphs en andere complexe datastructuren.
+
+-- Oplossing --
+Het belangrijkste idee van het Iterator pattern is om het verplaatsingsgedrag van een verzameling te extraheren in een afzonderlijk object dat een iterator wordt genoemd.
+
+Alle iterators moeten dezelfde interface implementeren. Dit maakt de clientcode compatibel en compatibel met elk verzamelingstype of elk traversal-algoritme, zolang er een goede iterator is.
+Als u een speciale manier nodig heeft om een ​​verzameling te doorkruisen, maakt u gewoon een nieuwe iteratorklasse, zonder de verzameling of de client te hoeven wijzigen.
+*/
