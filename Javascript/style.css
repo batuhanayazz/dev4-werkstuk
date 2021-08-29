@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    background-color: rgb(121, 36, 133);
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+}
+h2{
+    margin-top: 30px;
+    color: white;
+    font-size: 30px;
+}
+p{
+    color: white;
+    font-size: 25px;
+}
+
+main{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#iteratorElements ul{
+margin-top: 20px;
+display: inline;
+}
+
+#iteratorElements ul li{
+    color: white;
+    font-size: 20px;
+    }
